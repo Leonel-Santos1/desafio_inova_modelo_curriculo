@@ -259,10 +259,6 @@ body::before {
         font-size: 1rem;
     }
 
-    .titulo-links{
-        font-size: 1.2rem;
-    }
-
     .apresentacao{
         flex-direction: column-reverse;
         padding: 5%;
@@ -278,6 +274,10 @@ body::before {
 
     .imagens-projetos{
         flex-direction: column;
+    }
+
+    .botao_links{
+        font-size: 1rem;
     }
 
 }
