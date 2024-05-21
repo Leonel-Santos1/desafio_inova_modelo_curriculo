@@ -39,13 +39,22 @@ body::before {
 
 .cabecalho{
     padding: 3% 0 0% 3%;
+    position: relative;
+}
+
+.menu-list{
+    display: flex;
+    gap: 64px;
 }
 
 .menu-navegacao{
     padding: 3% 0% 0% 0%;
     display: flex;
     justify-content: center;
-    gap: 64px;
+}
+
+.menu-list-mobile{
+    display: none;
 }
 
 .menu-link{
@@ -70,6 +79,22 @@ body::before {
 
 .menu-link:hover::after{
     width: 100%;
+}
+
+.invisible{
+    display: none;
+}
+
+.botao_menu{
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    filter: var(--filtro-icon);
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    display: none;
 }
 
 .apresentacao{
@@ -254,14 +279,13 @@ body::before {
 }
 
 @media (max-width: 1300px) {
-
     .menu-link{
         font-size: 0.8rem;
     }
 
     .apresentacao{
         flex-direction: column-reverse;
-        padding: 5%;
+        padding: 5% ;
     }
 
     .apresentacao-conteudo{
@@ -278,6 +302,29 @@ body::before {
 
     .botao_links{
         font-size: 1rem;
+    }
+
+}
+
+@media (max-width: 530px) {
+    .menu-navegacao{
+        display: none;
+    }
+
+    .menu-list-mobile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .botao_menu{
+        display: initial;
+
+    }
+
+    .apresentacao{
+        padding: 12% 5% 5% 5%;
     }
 
 }
