@@ -16,7 +16,9 @@
             <li>
                 <a href="index.html" class="menu-link">
                     <img src="images/Frame.svg" class="icon" alt="ícone de uma casa">
-                    Home
+                    <div>
+                        Home
+                    </div>
                 </a>
             </li>
             <li>
@@ -65,7 +67,8 @@
 
 <main class="apresentacao">
     <section class="apresentacao-conteudo">
-        <h1 class="titulo-conteudo">Leonel <strong class="titulo-conteudo-destaque">Santos</strong></h1>
+        <h1 class="titulo-conteudo">Eu sou <strong class="titulo-conteudo-destaque" id="nome_autor"></strong></h1>
+
         <p class="texto-conteudo">
             Olá! Meu nome é Leonel Santos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi
             culpa dignissimos dolor, eaque eligendi enim facere ipsum magnam, molestiae nam pariatur sed soluta tempore
@@ -97,5 +100,23 @@
 </footer>
 
 <script src="menuMobile.js"></script>
+<script>
+    var texto = "Leonel Santos "
+
+    var textoElemento = document.querySelector(".titulo-conteudo-destaque");
+
+    var atraso = 300;
+    var contador = 0;
+
+    function digitarTexto() {
+        if (contador < texto.length) {
+            textoElemento.innerHTML += texto.charAt(contador);
+            contador++;
+            setTimeout(digitarTexto, atraso);
+        }
+    }
+
+    digitarTexto();
+</script>
 </body>
 </html>

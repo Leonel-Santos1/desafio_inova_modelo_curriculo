@@ -65,7 +65,7 @@
 
 <main class="apresentacao-projetos">
     <section class="apresentacao-conteudo-projetos">
-        <h1 class="titulo-conteudo">Meus <strong class="titulo-conteudo-destaque">Projetos</strong></h1>
+        <h1 class="titulo-conteudo">Meus <strong class="titulo-conteudo-destaque" id="nome_autor"></strong></h1>
         <p class="texto-conteudo">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium commodi
             culpa dignissimos dolor, eaque eligendi enim facere ipsum magnam, molestiae nam pariatur sed soluta tempore
@@ -102,6 +102,23 @@
 </footer>
 
 <script src="menuMobile.js"></script>
+<script>
+    var texto = "Projetos "
 
+    var textoElemento = document.querySelector(".titulo-conteudo-destaque");
+
+    var atraso = 300;
+    var contador = 0;
+
+    function digitarTexto() {
+        if (contador < texto.length) {
+            textoElemento.innerHTML += texto.charAt(contador);
+            contador++;
+            setTimeout(digitarTexto, atraso);
+        }
+    }
+
+    digitarTexto();
+</script>
 </body>
 </html>
