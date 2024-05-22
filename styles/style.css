@@ -342,6 +342,11 @@ li {
         gap: 16px;
     }
 
+    .menu-link{
+        flex-direction: column;
+    }
+
+
     .botao_menu {
         display: initial;
 
